@@ -1,3 +1,3 @@
-# Color Generator `v1.0`
+# Color Generator `v2.0`
 
-[Preview (Private)](https://color-generator-lm09vwtev-saeidex.vercel.app/)
+[Preview (Private)](https://color-generator-hn691ak2b-saeidex.vercel.app)
