@@ -28,7 +28,7 @@ function main() {
 
   // handle click event of changeBtn
   copyBtn.addEventListener("click", function () {
-    navigator.clipboard.writeText(bgColor);
+    navigator.clipboard.writeText(displayColorCode.value);
   });
 }
 
