@@ -1,7 +1,9 @@
 import "./style.css";
 /**
  * Project Recuirements:
- * - Change the backgroud color by generating random HEX color by clicking a button and show color code
+ * - Change the backgroud color by generating random HEX color by clicking a button
+ * - show color code
+ * - add a button to copy color code
  */
 
 // onloader handler
@@ -13,14 +15,20 @@ function main() {
   // collecting references
   const root = document.getElementById("root");
   const changeBtn = document.getElementById("change-btn");
+  const copyBtn = document.getElementById("copy-btn");
   const displayColorCode = document.getElementById("display-color-code");
 
-  // handle click event
+  // handle click event of changeBtn
   changeBtn.addEventListener("click", function () {
     root.classList.remove("bg-cyan-400");
     const bgColor = generateRgbColor();
     root.style.backgroundColor = bgColor;
     displayColorCode.value = bgColor;
+  });
+
+  // handle click event of changeBtn
+  copyBtn.addEventListener("click", function () {
+    navigator.clipboard.writeText(bgColor);
   });
 }
 

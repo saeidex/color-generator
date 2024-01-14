@@ -14,16 +14,23 @@
       class="mx-auto flex h-screen w-screen items-center justify-center bg-cyan-400 px-8 text-center font-mono text-2xl text-white"
     >
       <main class="flex flex-col gap-2">
-        <input
-          type="text"
-          disabled
-          value="#67e8f9"
-          id="display-color-code"
-          class="block w-full h-14 rounded-md bg-slate-500 text-center"
-        />
+        <div class="flex gap-2">
+          <input
+            type="text"
+            disabled
+            value="#67e8f9"
+            id="display-color-code"
+            class="block w-full h-14 rounded-md bg-slate-500 text-center"
+          />
+          <button
+            class="bg-slate-500 rounded-md px-6 text-lg hover:bg-slate-300 hover:text-slate-500"
+          >
+            Copy
+          </button>
+        </div>
         <button
           id="change-btn"
-          class="cursor-pointer w-full text-lg rounded-md bg-slate-300 h-14 py-3 text-slate-600 shadow-2xl"
+          class="cursor-pointer w-full text-lg rounded-md bg-slate-300 h-14 py-3 text-slate-600 shadow-2xl select-none hover:bg-slate-200"
         >
           Change Color
         </button>
