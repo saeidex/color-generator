@@ -7,17 +7,27 @@
     <title>Color Genarator</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
   </head>
+
   <body>
     <div
       id="root"
       class="mx-auto flex h-screen w-screen items-center justify-center bg-cyan-400 px-8 text-center font-mono text-2xl text-white"
     >
-      <button
-        id="change-btn"
-        class="cursor-pointer rounded-md bg-slate-300 px-8 py-3 text-slate-600 shadow-2xl"
-      >
-        Change Color
-      </button>
+      <main class="flex flex-col gap-2">
+        <input
+          type="text"
+          disabled
+          value="#67e8f9"
+          id="display-color-code"
+          class="block w-full h-14 rounded-md bg-slate-500 text-center"
+        />
+        <button
+          id="change-btn"
+          class="cursor-pointer w-full text-lg rounded-md bg-slate-300 h-14 py-3 text-slate-600 shadow-2xl"
+        >
+          Change Color
+        </button>
+      </main>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
