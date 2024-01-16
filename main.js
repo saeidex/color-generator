@@ -4,6 +4,7 @@ import "./style.css";
  * - Change the backgroud color by generating random HEX color by clicking a button
  * - show color code
  * - add a button to copy color code
+ * - generate toast message while copied
  */
 
 // onloader handler
@@ -26,9 +27,10 @@ function main() {
     displayColorCode.value = bgColor;
   });
 
-  // handle click event of changeBtn
+  // handle click event of copyBtn
   copyBtn.addEventListener("click", function () {
     navigator.clipboard.writeText(displayColorCode.value);
+    generateToastMessage("Copied");
   });
 }
 
@@ -39,4 +41,12 @@ function generateRgbColor() {
   const blue = Math.floor(Math.random() * 255);
 
   return `#${red.toString(16)}${green.toString(16)}${blue.toString(16)}`;
+}
+
+// toast message generator
+function generateToastMessage(msg) {
+  const div = document.createElement("div");
+  div.innerText = msg;
+  div.className = `text-lg px-6 py-3 fixed top-8 right-8 z-50 bg-green-600 text-green-50 rounded-md font-bold shadow-lg`;
+  document.body.appendChild(div);
 }

@@ -2,7 +2,14 @@
 export default {
   content: ["*"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+
+      },
+      keyframes: {
+
+      }
+    },
   },
   plugins: [],
 };
